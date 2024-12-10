@@ -1,0 +1,213 @@
+* {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.content {
+  margin-top: 120px;
+}
+.content .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.content .header .title {
+  font-size: 50px;
+  color: #527CCD;
+}
+
+.slider-ui {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.slider-ui .progress-bar {
+  height: 0;
+  width: 360px;
+  margin-right: 40px;
+  border: 1px solid #C8D9FB;
+}
+.slider-ui .progress-bar .progress-line {
+  display: block;
+  margin-left: -1px;
+  margin-top: -1px;
+  background-color: #527CCD;
+  height: 2px;
+  width: 0px;
+}
+.slider-ui .ui {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.slider-ui .ui .btn {
+  height: 60px;
+  width: 60px;
+  border: 1px solid #C8D9FB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.slider-ui .ui .btn:hover {
+  background-color: #C8D9FB;
+  cursor: pointer;
+}
+.slider-ui .ui .btn-right:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 1px solid #527CCD;
+  border-width: 1px 0 0 1px;
+  -webkit-transform: translate(-50%, -50%) rotate(135deg);
+          transform: translate(-50%, -50%) rotate(135deg);
+  margin-left: 5px;
+  margin-top: 15px;
+}
+.slider-ui .ui .btn-left {
+  margin-right: 40px;
+}
+.slider-ui .ui .btn-left:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 1px solid #527CCD;
+  border-width: 1px 0 0 1px;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+  margin-left: 18px;
+  margin-top: 15px;
+}
+
+.slider {
+  margin-top: 40px;
+  overflow: hidden;
+}
+.slider .track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.item {
+  min-width: 260px;
+  margin: 0 20px;
+  min-height: 420px;
+  border: 1px solid #C8D9FB;
+  padding: 20px;
+  line-height: 22px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.item:first-child {
+  margin-left: 0;
+}
+.item:last-child {
+  margin-right: 0;
+}
+.item:hover {
+  border: 1px solid #527CCD;
+  cursor: pointer;
+}
+.item .date {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #527CCD;
+}
+.item .title {
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 400;
+  color: #527CCD;
+  width: auto;
+}
+.item .description {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #527CCD;
+  font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    margin: 0 20px;
+  }
+
+  .slider {
+    max-width: 880px;
+    margin: 40px auto;
+  }
+}
+@media (max-width: 992px) {
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .slider-ui {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 10px auto;
+  }
+  .header .slider-ui .progress-bar {
+    margin: 20px auto;
+  }
+  .header .slider-ui .ui {
+    margin-top: 10px;
+  }
+
+  .slider {
+    margin: 20px auto;
+  }
+}
+@media (max-width: 900px) {
+  .slider {
+    max-width: 580px;
+  }
+}
+@media (max-width: 767px) {
+  .slider {
+    max-width: 260px;
+  }
+
+  .slider-ui .progress-bar {
+    margin: 20px auto;
+    margin-right: 0px;
+    width: 270px;
+  }
+}
